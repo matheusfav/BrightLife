@@ -1,0 +1,15 @@
+<!-- templates/lamp_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Lamps</title>
+</head>
+<body>
+    <h2>My Lamps</h2>
+    <ul>
+        {% for lamp in lamps %}
+        <li><a href="{% url 'lamp_detail' lamp.id %}">{{ lamp.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
